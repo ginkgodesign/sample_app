@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>config/routes.rb</string>
+	<string>app/models/user.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,7 +18,7 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>200</integer>
+	<integer>178</integer>
 	<key>metaData</key>
 	<dict>
 		<key>app/controllers/users_controller.rb</key>
@@ -26,14 +26,28 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>3</integer>
 				<key>line</key>
-				<integer>9</integer>
+				<integer>10</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
+		</dict>
+		<key>app/models/user.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>4</integer>
+				<key>line</key>
+				<integer>53</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>21</integer>
 		</dict>
 		<key>config/routes.rb</key>
 		<dict>
@@ -47,17 +61,33 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+		<key>spec/models/user_spec.rb</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>9</integer>
+				<key>line</key>
+				<integer>78</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>74</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>app/controllers/users_controller.rb</string>
+		<string>spec/models/user_spec.rb</string>
+		<string>app/models/user.rb</string>
 		<string>config/routes.rb</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{289, 138}, {1067, 740}}</string>
+	<string>{{681, 30}, {648, 738}}</string>
 </dict>
 </plist>
