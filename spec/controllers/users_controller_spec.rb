@@ -54,7 +54,26 @@ describe UsersController do
         response.should have_selector("a", :href => "/users?page=2",
                                            :content => "Next")
       end
+      
+      it "should not display delete links" do
+        get :index
+        response.should_not have_selector("a", :content => "delete")
+      end
+      
+    end
     
+    describe "for admin users" do
+      
+      before(:each) do
+        admin = Factory(:user, :email => "admin@example.com", :admin => true)
+        test_sign_in(admin)
+      end
+      
+      it "should display delete links" do
+        get :index
+        response.should have_selector("a", :content => "delete")
+      end
+      
     end
     
   end
@@ -127,6 +146,12 @@ describe UsersController do
     it "should have a submit button" do
       get :new
       response.should have_selector("input[name='commit'][type='submit']")
+    end
+    
+    it "should redirect signed-in users to root_path" do
+      test_sign_in(Factory(:user))
+      get :new
+      response.should redirect_to(root_path)
     end
     
   end
@@ -334,8 +359,8 @@ describe UsersController do
     describe "as an admin user" do
       
       before(:each) do
-        admin = Factory(:user, :email => "admin@example.com", :admin => true)
-        test_sign_in(admin)
+        @admin = Factory(:user, :email => "admin@example.com", :admin => true)
+        test_sign_in(@admin)
       end
       
       it "should destroy the user" do
@@ -344,10 +369,17 @@ describe UsersController do
         end.should change(User, :count).by(-1)
       end
       
+      it "should not destory the current user" do
+        lambda do
+          delete :destroy, :id => @admin
+        end.should_not change(User, :count)
+      end
+      
       it "should redirect to the users page" do
         delete :destroy, :id => @user
         response.should redirect_to(users_path)
       end
+      
       
     end
     
