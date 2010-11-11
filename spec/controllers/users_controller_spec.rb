@@ -65,8 +65,10 @@ describe UsersController do
     describe "for admin users" do
       
       before(:each) do
-        admin = Factory(:user, :email => "admin@example.com", :admin => true)
-        test_sign_in(admin)
+        @admin = Factory(:user, :email => "admin@example.com", :admin => true)
+        test_sign_in(@admin)
+        second = Factory(:user, :email => "another@example.com")
+        third  = Factory(:user, :email => "another@example.net")
       end
       
       it "should display delete links" do
