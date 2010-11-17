@@ -3,10 +3,10 @@ require 'spec_helper'
 describe "Microposts" do
   
   before(:each) do
-    user = Factory(:user)
+    @user = Factory(:user)
     visit signin_path
-    fill_in :email,    :with => user.email
-    fill_in :password, :with => user.password
+    fill_in :email,    :with => @user.email
+    fill_in :password, :with => @user.password
     click_button
   end
   
@@ -40,6 +40,24 @@ describe "Microposts" do
       
     end
   
+  end
+  
+  describe "count" do
+    
+    before(:each) do
+      @count = @user.microposts.count
+    end
+    
+    it "should be displayed on the home page" do
+      visit root_path
+      response.should have_selector("span.microposts", :content => "#{@count}")
+    end
+    
+    it "should be displayed on the user's profile" do
+      visit user_path(@user)
+      response.should have_selector("span.microposts", :content => "#{@count}")
+    end
+    
   end
   
 end

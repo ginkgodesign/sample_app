@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>currentDocument</key>
-	<string>db/migrate/20101115091535_create_microposts.rb</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -18,31 +16,12 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>270</integer>
+	<integer>290</integer>
 	<key>metaData</key>
-	<dict>
-		<key>db/migrate/20101115091535_create_microposts.rb</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>35</integer>
-				<key>line</key>
-				<integer>8</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
-	<key>openDocuments</key>
-	<array>
-		<string>db/migrate/20101115091535_create_microposts.rb</string>
-	</array>
+	<dict/>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{736, 180}, {648, 698}}</string>
+	<string>{{741, 179}, {652, 699}}</string>
 </dict>
 </plist>
