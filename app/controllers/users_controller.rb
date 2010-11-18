@@ -5,8 +5,8 @@ class UsersController < ApplicationController
   before_filter :signed_out,   :only => [:new, :create]
 
   def new
-      @user = User.new
-      @title = "Sign up"
+    @user = User.new
+    @title = "Sign up"
   end
   
   def index
